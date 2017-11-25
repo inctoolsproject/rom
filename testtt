@@ -282,11 +282,11 @@ def SEND_MESSAGE(op):
                     sendMessage(msg.to, "ตรวจสอบข้อมูลสักครู่...")
                     kontak = client.getContacts(blockedlist)
                     num=1
-                    msgs="รากการบล็อกที่มี\n"
+                    msgs="รากการบล็อก\n"
                     for ids in kontak:
                         msgs+="\n%i. %s" % (num, ids.displayName)
                         num=(num+1)
-                    msgs+="\n\nทั้งหมด %i รายการที่บล็อก(s)" % len(kontak)
+                    msgs+="\n\nทั้งหมด %i รายการบล็อก(s)" % len(kontak)
 
                 elif "ส่งข้อความ " in msg.text:
                     cond = msg.text.split(" ")
