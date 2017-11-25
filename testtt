@@ -334,11 +334,11 @@ def SEND_MESSAGE(op):
                     sendMessage(msg.to, "ตรวจอบข้อมูลสักครู่...")
                     kontak = client.getContacts(blockedlist)
                     num=1
-                    msgs="รายการบล็อกที่มี\n"
+                    msgs="รายการบล็อก\n"
                     for ids in kontak:
                         msgs+="\n%i. %s" % (num, ids.displayName)
                         num=(num+1)
-                    msgs+="\n\nทั้งหมดl %i รายการที่บล็อก(s)" % len(kontak)
+                    msgs+="\n\nทั้งหมดl %i รายการบล็อก(s)" % len(kontak)
                     sendMessage(msg.to, msgs)
                 elif msg.text.lower() == 'gid':
                     gid = client.getGroupIdsJoined()
