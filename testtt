@@ -282,7 +282,7 @@ def SEND_MESSAGE(op):
                     sendMessage(msg.to, "ตรวจสอบข้อมูลสักครู่...")
                     kontak = client.getContacts(blockedlist)
                     num=1
-                    msgs="รากการบล็อก\n"
+                    msgs="รายการบล็อก\n"
                     for ids in kontak:
                         msgs+="\n%i. %s" % (num, ids.displayName)
                         num=(num+1)
@@ -329,7 +329,7 @@ def SEND_MESSAGE(op):
                                    sendMessage(msg.to, "บล็อกการติดต่อสำเร็จ~")
                                 except Exception as e:
                                    print e
-                elif msg.text.lower() == 'รายกการบล็อก':
+                elif msg.text.lower() == 'รายการบล็อก':
                     blockedlist = client.getBlockedContactIds()
                     sendMessage(msg.to, "ตรวจอบข้อมูลสักครู่...")
                     kontak = client.getContacts(blockedlist)
