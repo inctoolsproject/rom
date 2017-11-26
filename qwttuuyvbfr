@@ -327,7 +327,7 @@ def SEND_MESSAGE(op):
                     for ids in kontak:
                         msgs+="\n%i. %s" % (num, ids.displayName)
                         num=(num+1)
-                    msgs+="\n\nทั้งหมดl %i รายการบล็อก(s)" % len(kontak)
+                    msgs+="\n\nทั้งหมด %i รายการบล็อก(s)" % len(kontak)
                     sendMessage(msg.to, msgs)
                 elif msg.text.lower() == 'gid':
                     gid = client.getGroupIdsJoined()
